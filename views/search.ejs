@@ -1,0 +1,19 @@
+<% include partials/header %>
+
+ 
+  <div class="jumbotron jumbotron-fluid ">
+    <div class="container">
+         <h1 class="display-4 text-center">OMDb Movie</h1>
+         <p class="text-center">Simple Movie Search Engine Using OMDb API.</p>
+    <form action="/movie" method="GET">
+     <div class="form-group">
+        <input type="text" class="form-control" id="formGroupExampleInput" name="search" placeholder="Search With Movie Name.." required>
+     </div>
+     <div class="text-center">
+          <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i> Search</button>
+     </div>
+    </form>
+  </div>
+</div>
+
+<% include partials/footer %>

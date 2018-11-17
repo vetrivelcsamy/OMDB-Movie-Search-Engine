@@ -1,17 +1,27 @@
-var express = require('express')
-var app = express()
-
+var express = require('express'),
+     request = require('request'),
+     ejsLint = require('ejs-lint');
+var app = express();
 // app config
 app.set("view engine", "ejs");
 
 // home 
-app.get('/', function(req, res){
-  res.render('home')
-});
+ app.get('/', function (req, res) {
+  res.render('search')
+})
 
-// about 
-app.get('/about', function(req, res){
-  res.render('about')
+//app here
+ app.get('/movie', function (req, res) {
+      var query = req.query.search;
+      var url = "http://www.omdbapi.com/?&apikey=e7e83f9e&s=" + query;
+      request(url, function(error, response, body){
+      if(!error && response.statusCode == 200){
+      var mybody = JSON.parse(body);
+      res.render("movie", {mybody : mybody});
+     }else{
+      console.log("server err");
+     }
+   });
 });
 
 // App listen

@@ -1,0 +1,22 @@
+<% include partials/header %>
+
+ <div class="py-5" >
+<div class="container">
+   <div class="row">
+       
+      <% mybody["Search"].forEach(function(movie) { %>
+      
+         <div class="col-md-4">
+             <img src="<%= movie["Poster"] %>" alt="<%= movie["Title"] %>" class="img-thumbnail img-responsive">
+             <div class="py-2" >
+                 <p class="h5"><%= movie["Title"] %></p>
+                 <button class="btn btn-warning"><i class="fa fa-imdb"></i> <%= movie["imdbID"] %></button>
+                 <button class="btn btn-secondary"><i class="fa fa-clock"></i>Year: <%= movie["Year"] %></button>
+             </div>
+         </div>
+    <% }) %>
+  </div>
+</div>
+</div>
+
+<% include partials/footer %>
