@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 //app here
  app.get('/movie', function (req, res) {
       var query = req.query.search;
-      var url = "http://www.omdbapi.com/?&apikey=e7e83f9e&s=" + query;
+      var url = "http://www.omdbapi.com/?&apikey={API Key}&s=" + query;
       request(url, function(error, response, body){
       if(!error && response.statusCode == 200){
       var mybody = JSON.parse(body);
