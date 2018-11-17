@@ -1,4 +1,4 @@
-# [OMDB Search Engine ?] (https://infinite-waters-54425.herokuapp.com/)
+# [OMDB Search Engine?](https://infinite-waters-54425.herokuapp.com/)
 
 If you'd like to contribute, help me close issues.
 
